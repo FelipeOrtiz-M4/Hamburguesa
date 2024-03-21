@@ -1,0 +1,50 @@
+#about-us {
+    width: calc(100vw - 10px);
+    min-height: 550px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.body-about {
+    height: auto;
+    text-align: center;
+}
+
+.body-about img {
+    max-width: 100%;
+    height: auto;
+}
+
+.body-about div:nth-child(1) {
+    font-size: 15px;
+    color: #FF702A;
+}
+
+.body-about div:nth-child(2) {
+    font-size: 30px;
+    color: white;
+    line-height: 1.2;
+}
+
+.body-about div:nth-child(3) {
+    font-size: 15px;
+    color: white;
+}
+
+.body-about button {
+    margin-top: 10px;
+    background-color: #FF702A;
+    color: white;
+    height: 30px;
+    border-radius: 10%;
+}
+
+@media screen and (max-width: 750px) {
+    #about-us {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+}

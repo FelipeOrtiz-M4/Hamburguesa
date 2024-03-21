@@ -1,0 +1,90 @@
+#services {
+    width: calc(100vw - 10px);
+    min-height: 550px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Usando grid para columnas responsivas */
+    gap: 20px; /* Espacio entre los elementos */
+    justify-content: center;
+    align-items: center;
+}
+
+#services .services-containers {
+    text-align: center;
+}
+
+#services .services-containers div {
+    margin-bottom: 20px; /* Espacio entre las secciones */
+}
+
+#services img {
+    width: 50%;
+    max-width: 300px; /* Ajusta el tamaño máximo de la imagen */
+}
+
+
+
+#services {
+    width: calc(100vw - 10px);
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#services h1,
+#services h2,
+#services h4 {
+    margin: 0;
+    color: white; /* Color de texto blanco */
+}
+
+#services .services-containers:nth-child(1) {
+    text-align: center;
+}
+
+#services .services-containers:nth-child(2) {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+}
+
+#services .services-containers:nth-child(2) div {
+    width: 30%;
+    aspect-ratio: 1/1;
+    margin: 10px; /* Espacio entre los elementos */
+}
+
+#services .services-containers:nth-child(2) div p {
+    color: white;
+}
+
+#services img {
+    width: 100%; /* Ajustar la imagen al ancho del contenedor */
+}
+
+#services h4 {
+    color: #FF702A;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+#services h1 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 750px) {
+    #services .services-containers:nth-child(2) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    #services .services-containers:nth-child(2) div {
+        width: 80vw;
+        max-width: 350px;
+    }
+}

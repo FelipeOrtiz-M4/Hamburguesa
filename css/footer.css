@@ -1,0 +1,117 @@
+/* Estilo para la sección "Learn More" */
+#contact {
+    width: calc(100vw - 10px);
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Modificado para centrar verticalmente */
+    background-image: url(../img/fondo.png);
+    background-size: cover;
+    text-align: center;
+}
+
+#contact div {
+    width: 75%;
+}
+
+#contact h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 400;
+}
+
+#contact button {
+    margin-top: 10px;
+    background-color: #FF702A;
+    color: white;
+    border-radius: 10px;
+}
+
+/* Estilo para el pie de página */
+footer {
+    display: flex;
+    justify-content: space-around;
+    width: calc(100vw - 10px);
+    min-height: 200px;
+    margin: 0 30px;
+    position: relative; /* Agregado */
+}
+
+footer hr {
+    position: absolute;
+    top: 40px;
+    width: 50px;
+    z-index: -1;
+    border-color: #FF702A;
+}
+
+footer div {
+    max-height: 90%;
+    width: 20%;
+    max-width: 175px;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+footer div h3 {
+    color: white;
+}
+
+footer div a {
+    color: white;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+footer div:nth-child(4) #contact-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0;
+}
+
+footer div:nth-child(4) #contact-images i {
+    font-size: 30px;
+    color: #FF702A;
+    margin-right: 3px;
+}
+
+/* Media queries */
+@media screen and (max-width: 750px) {
+    #contact h1 {
+        font-size: 1.8rem;
+        font-weight: 400;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        width: calc(100vw - 10px);
+    }
+    footer h3 {
+        margin-bottom: 0;
+    }
+    footer div {
+        width: 100%;
+    }
+    footer div:nth-child(4), #contact-images {
+        align-self: center;
+        align-self: center;
+        text-align: center;
+    }
+    footer div:nth-child(4) hr {
+        margin-left: 35px;
+    }
+    footer div:nth-child(4) #contact-images {
+        justify-content: center;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+    footer hr {
+        position: relative;
+        top: 0;
+        margin: 0 0 18.720px 0;
+    }
+}

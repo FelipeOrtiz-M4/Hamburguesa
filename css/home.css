@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #1E1D2B;
+}
+
+#home {
+    width: calc(100vw - 10px);
+    overflow: hidden;
+}
+
+#home nav {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    position: fixed;
+    background-color: #1E1D2B;
+    top: 0;
+    left: 0;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#home nav #izquierda-nav {
+    color: #FF702A;
+    font-size: 1.5rem;
+    align-self: center;
+    margin-left: 20px;
+}
+
+#home nav #derecha-nav {
+    width: 40%;
+    max-width: 500px;
+}
+
+#home #derecha-nav-pc {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#home #derecha-nav-pc a {
+    color: white;
+}
+
+#home #derecha-nav-cel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#home #derecha-nav-cel label {
+    position: absolute;
+    right: 5px;
+    top: 2px;
+}
+
+#home #menu-desplegable {
+    display: flex;
+    width: 100vw;
+    height: 0px;
+    overflow: hidden;
+    background-color: #2C2B47;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: height 0.5s;
+    z-index: 2;
+}
+
+#home #menu-desplegable a {
+    font-size: 25px;
+    color: white;
+}
+
+#menu-hamburguesa:checked + label + #menu-desplegable {
+    height: 300px;
+}
+
+#home #derecha-nav-cel i {
+    font-size: 3rem;
+    color: #FF702A;
+}
+
+#body-home {
+    width: 100%;
+    min-height: 500px;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+#body-home section {
+    height: auto;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 5%;
+    padding: 5px;
+    justify-content: space-between;
+    text-align: justify;
+}
+
+#body-home section:nth-child(2) {
+    height: 30vw;
+    max-height: 491px;
+}
+
+#body-home section:nth-child(2) img {
+    align-self: center;
+    max-height: 100%;
+    max-width: max-content;
+}
+
+.body-home-section div:nth-child(1) {
+    color: #FF702A;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.body-home-section div:nth-child(2) {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.body-home-section div button {
+    margin-top: 10px;
+    background-color: #FF702A;
+    color: white;
+    height: 30px;
+    border-radius: 10%;
+}
+
+@media screen and (max-width: 750px) {
+    #home #derecha-nav-pc {
+        display: none;
+    }
+    
+    #body-home section {
+        text-align: center;
+    }
+
+    #body-home section:nth-child(2) {
+        height: 250px;
+    }
+    #home #menu-hamburguesa {
+        display: none;
+    }
+    #body-home {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (min-width: 750px) {
+    #home #derecha-nav-cel {
+        display: none;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .body-home-section div:nth-child(1) {
+        font-size: 5rem;
+    }
+    .body-home-section div:nth-child(2) {
+        font-size: 2.5rem;
+    }
+}
